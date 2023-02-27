@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="row ">
+            <div class=></div>
+            <div class="estadisticas"></div>
+            <h1 class="text-center text-warning bg-secondary py-5">Juego de memoria</h1>
+            <ul class="nav menu">
+                <li class="nav-item">
+                  <a class="nav-link active fs-2" href="#">Jugador:  <span class="Player">User 1</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="#">Aciertos: <span class="aciertos">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-2" href="#">Intentos: <span class="intentos">15</span></a>
+                <li class="nav-item">
+                    <a class="nav-link fs-2" href="#">Tiempo: <span class="tiempo">60</span></a>
+                <li class="nav-item">
+                    <a class="nav-link fs-2" href="#">Nivel: <span class="nivel">1</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary iniciar">Iniciar</button>
+                </li>
+              </ul>
+
+        </div>
+        
+        <div class="row"></div>
+        <div class="col-6 ">
+            <div class="row g.0 tablero">
+                
+            </div>
+        </div>
+        <div class="col-6">
+          <table class="table listado-tabla" style="background: white;">
+            <thead >
+              <tr>
+                <th scope="col">Puesto</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Intentos</th>
+                <th scope="col">Tiempo</th>
+              </tr>
+            </thead>
+            <tbody >
+             
+            </tbody>
+          </table>
+        </div>
+        
+<!-- Modal -->
+<div class="modalNombre modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Escriba Tu Nombre</h5>
+        <button type="button" class="btn-close cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text" class="nombreJ form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary cerrar" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="registrar btn btn-primary">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div id="ganaste" style="display:none;">FELICIDADES PASASTE DE NIVEL...</div>
+    <div id="ganaste1" style="display:none;">FELICIDADES GANASTE ERES EL MEJOR...</div>
+    <div id="perdiste" style="display:none;">PERDISTE INTENTALO DE NUEVO...</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="funciones.js"></script>
+    <script src="guardarDatos.js"></script>
+  </body>
+</html>
