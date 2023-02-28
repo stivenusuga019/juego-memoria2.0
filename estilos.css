@@ -33,5 +33,25 @@
 }
 
 body{
-  background-color: #333333;
+  animation: changeBg 5s infinite
+  alternate linear;
+}
+@keyframes changeBg{
+
+  0%{
+   background: rgb(45, 211, 145);
+  }
+
+  25%{
+    background: rgb(78, 40, 1591);
+  }
+  50%{
+    background: rgb(100, 50,250);
+  }
+  75%{
+    background: rgb(150, 150, 240);
+  }
+  100%{
+    background: rgb(185, 65, 191);
+  }
 }

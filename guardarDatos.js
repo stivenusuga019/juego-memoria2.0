@@ -26,7 +26,11 @@ function guardarDatos(objeto) {
     //pasar los datos a texto
     localStorage.setItem(DatosJugadores,JSON.stringify(Jugadores));
     //alert("Datos Guardados Exitosamente...")
+
+
 }
+
+
 
 //mostrar el ranking de jugador
 function mostrarDatos() {
@@ -36,6 +40,21 @@ function mostrarDatos() {
         if (datosDelNavegador !== null) {
             Jugadores = JSON.parse(datosDelNavegador);
         }
+        Jugadores.sort((a,b)=>{
+            if (Number(b.intentos) < Number(a.intentos)) {
+                return -1;
+            }
+            if (Number(b.intentos) < Number(a.intentos)) {
+                return 1;
+            }
+            if (Number(b.tiempo) < Number(a.tiempo)) {
+                return -1;
+            }
+            if (Number(b.tiempo) < Number(a.tiempo)) {
+                return 1;
+            }
+            return 0;
+                })
         let tabla = document.querySelector(".listado-tabla tbody")
     Jugadores.forEach( (element, i)=>{
         let fila = document.createElement("tr");
